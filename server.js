@@ -4,8 +4,10 @@ const express = require("express");
 const app = express();
 // we set up our routes
 const cartItems = require("./cartItems.routes");
+// require cors
+const cors = require("cors");
 
-
+app.use(cors());
 // since we're going to be dealing with json data, we need the below line
 app.use(express.json());
 // we set up our express app to use the endpoints from our cartItems route file
